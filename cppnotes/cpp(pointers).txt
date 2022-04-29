@@ -1,0 +1,65 @@
+Pointes: 
+
+int a=10;
+int* apointer =&a; OR
+
+apointer = &a; (apointer is pointer to a)
+
+cout<<&a<<endl; (0x61ff081)
+cout<<apointer<<endl; (0x61ff08)
+cout<<*apointer<<endl; (10)
+ *apointer =20;
+cout<<a;  (output =20)
+
+Pointers Arithmetic: (++i,i++,+,-)
+
+int main(){
+int a=10;
+int* apointr= &a; 
+cout<<apointr; (output = 0x61ff08)
+apointr--;
+cout<<apointr;  (output = 0x61ff04 [because apointr is of int type so gap is 4 bits]
+
+
+Pointers and Arrays:
+
+int arr[] ={10,20,30,50}
+cout<<*arr<<endl; (output = 10 (*arr starts from 0th element we so we declare a pointer to arr and make it pointer++ for next elements))
+int *ptr= arr; 
+for (int i=0;i<4;i++){
+cout<<*ptr<<endl;    (output = 10,20,30,50)
+ptr++;
+}  
+      OR
+
+int arr[] ={10,20,30,50}
+cout<<*arr<<endl; (output = 10 (*arr starts from 0th element we  have to *arr++ for next elements))
+for (int i=0;i<4;i++){
+cout<<*(arr +i)<<endl;    (output = 10,20,30,50)
+} 
+
+Pointer to Pointer:
+
+int main(){
+int a =10;
+int* p =&a;
+cout<<*p;  (output =10)
+int** q=&p; 
+cout<<*q;  (output =0x61ff08)
+cout<<**q;  (output =10)
+}
+
+
+Passing pointers to function
+(variable don't get exchanged to diff. functions but if we
+pass memory location using pointers it is possible to modify any
+variable of any function)
+
+
+
+
+
+
+
+
+

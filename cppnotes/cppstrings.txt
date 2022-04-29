@@ -1,0 +1,91 @@
+Strings:
+
+string str = "apnikaksha"
+cout<<str;
+
+
+string srt;
+getline(cin, srt);
+
+
+String Functions:
+
+Append function:
+string s1 ="fam",s2 ="ily";
+s1.append(s2); 
+cout<< s1<<endl;  (output = family)
+   OR
+s1 = s1 + s2;
+cout<<s1;  (output = family)
+BOTH ARE SAME
+
+
+To find print any special charactor present in string:
+cout<< s1[3]; (output = i)
+
+Clear Function: 
+To make any string to empty string.
+s1.clear();
+cout <<s1; (output = null)
+
+Compare Function:
+string s1 = abc , s2 = xyz;
+cout<<s2.compare(s1); (output= difference between their char/int size)
+If ans is +ve then s2 is > s1. If both are same then diff = 0.
+
+Empty Function:
+s1.empty() to get only one time empty value.
+
+Erase Function:
+string s1 = "nincompoop";
+s1.erase(3,4);
+cout<<s1; (output=ninoop) (start erasing from 3rd char to 4 next charactors)
+
+Find Function:
+string s1 = "nincompoop";
+cout<<s1.find("com"); (output = 4) (gives position of first matching element)
+
+Insert Function:
+To insert string in another string at any possition.
+string s1 = "nincompoop";
+s1.insert(2, "lol");
+cout<<s1; (output= nilolncompoop)
+
+Length/Size Function:
+s1.size(); or s1.length(); gives no of char in the string.
+
+Substring Function:
+string s1 = "nincompoop";
+string s = s1.substr(6,4);
+cout<<s; (output = poop)
+
+String to Integer Function:
+string s1 = "786";
+int x = stoi(s1);
+cout<<x;
+
+Integer to String Function:
+int x = 786;
+cout<< to_string(x) + "2"; (output = 7862)
+
+Short The String Function:
+string s1 = "dsfgjfasjfkgsfk"
+sort(s1.begin(), s1.end());
+cout<<s1;
+
+Upper case Converter Function:
+string s = "fksfklgsiekdsl"
+transform(s.begin(), s.end(), s.begin(), ::toupper);   (first 2 given are to tell the string 3rd one is from where to start 4th is what todo)
+cout<<s; (output = all will be in uppercase) (::tolower to convert again in lower case)
+
+Greater int Function:
+string s = "239128482";
+sort(s.begin(), s.end(), greater<int>());
+cout<<s;
+
+
+
+
+
+
+
