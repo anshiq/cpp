@@ -1,0 +1,21 @@
+EXAMPLE 1:
+
+#include<iostream>
+using namespace std;
+class BASE{
+ public:
+int a=3;
+int b=6;
+};
+class DERIVED : public BASE {      // default is private
+public:
+int c =10;
+};
+int main(){
+      DERIVED k;
+      cout<<k.a<<endl;
+      cout<<k.b<<endl;
+      cout<<k.c<<endl;
+}
+
+// other examples are in cpplearnings
