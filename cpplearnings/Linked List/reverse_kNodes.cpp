@@ -32,7 +32,7 @@ node *reverse_kNodes(node *&head, int k)
     }
     if (nextptr != NULL)
     {
-        reverse_kNodes(nextptr, k);
+      head->address_to_nextNode =  reverse_kNodes(nextptr, k);
     }
     return prevptr;
 }
