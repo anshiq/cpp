@@ -62,7 +62,26 @@ void add_at_tail(node *&head, int value)
     n->next = NULL;
     n->prev = temp;
 }
+void delete_node(node* &head, int position){
+      node *temp = head;
+    int count = 1;
 
+     if(position ==1){
+        temp = head ;
+        head = temp->next;
+        delete temp;
+        return;
+    }
+    while (temp != NULL && count < position)
+    {
+        count++;
+        temp = temp->next;
+    }
+    temp->prev->next= temp->next;
+    temp->next->prev=temp->prev;
+   
+    delete temp;
+}
 int main()
 {
     node *head = new node();
@@ -91,5 +110,6 @@ int main()
     sixth->prev = fifth;
     int k = 2;
     Insert_anywhere(head, 5, 56);
+   delete_node(head,1);
     PrintList(head);
 }
