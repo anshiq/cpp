@@ -40,12 +40,15 @@ int main(){
        int** SolutionArr=new int*[n];
       for(int i=0;i<n;i++){
           SolutionArr[i]=new int[n];
-          for(int j=0;n<n;j++){
+        
+      }
+      for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
               SolutionArr[i][j]=0;
           }
       }
 
-      if(RatinMaze(arr,0,0,n,arr)){
+      if(RatinMaze(arr,0,0,n,SolutionArr)){
            for(int i=0;i<n;i++){
           for(int j=0;j<n;j++){
               cout<<SolutionArr[i][j]<<" ";
