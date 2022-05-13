@@ -17,6 +17,6 @@ void reverseSentence(string s){
     }cout<<endl;
 }
 int main(){
-   string s = "Me Ulta hone wala hu";
+   string s = "Me UUlta hone wala hu 😌";
    reverseSentence(s);   
 }
