@@ -5,7 +5,7 @@ using namespace std;
 int prefixEvaluation(string s)
 {
     stack<int> st;
-    for (int i = s.length() - 1; i >= 0; i--)
+    for (int i =0; i <s.length(); i++)
     {
         if (s[i] >= '0' && s[i] <= '9')
         {                        // storing the digits present in equation
