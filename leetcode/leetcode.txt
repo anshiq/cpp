@@ -1,0 +1,15 @@
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+         int left=0, j=1;  // j =1 cause first element is always unique
+        for (j=1;j<nums.size();j++){
+            if(nums[left]!=nums[j]){  // when last unique element is not == the forward pointer j's element.
+                left++;   // move left one step
+                nums[left]=nums[j]; // store the value.
+                
+            } // changing elements in same array by pointer access.
+        }
+        return left+1;    // due to question
+    }
+};
