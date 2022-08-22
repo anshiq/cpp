@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-
+// use cin.ignore(); to go to the next line ignoring spaces after words. 
 using namespace std;
 
 int main()

@@ -5,10 +5,12 @@ cout<<str;
 
 
 string srt;
-getline(cin, srt);
+getline(cin, srt); // use cin.ignore(); to go to the next line ignoring spaces after words. 
 
 
 String Functions:
+to input any charactpr directly to string
+str.push_back('g');
 
 Append function:
 string s1 ="fam",s2 ="ily";
