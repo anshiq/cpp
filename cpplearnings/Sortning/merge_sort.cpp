@@ -8,9 +8,11 @@ void print(int a[],int length){
 void merge(int arr[],int mid,int low,int high){
     int i,j,k; int b[100];
     i = low; j=mid +1; k= low;
+    // i gonna itrate over left hand array and j gonna itrate over right hand array .
+    // k gonna itrate over whole original array.
     while (i<=mid && j<=high)
     {
-        if(arr[i]<arr[j]){
+        if(arr[i]<arr[j]){ 
             b[k]=arr[i]; 
             i++; k++;
         }
@@ -19,6 +21,7 @@ void merge(int arr[],int mid,int low,int high){
             j++; k++;
         }
     }
+    // inserting the remaining elements. 
     while(i<=mid){
         b[k]=arr[i]; 
         i++; k++;
@@ -27,7 +30,7 @@ void merge(int arr[],int mid,int low,int high){
         b[k]=arr[j];
         j++; k++;
     }
-    for (size_t i = 0; i <=high; i++)
+    for (size_t i = 0; i <=high; i++) // applying the changes in the original array.
     {
        arr[i]=b[i];
     }

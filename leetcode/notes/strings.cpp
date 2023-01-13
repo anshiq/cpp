@@ -9,4 +9,5 @@ int main(){
     getline(cin,s); // function to take line input 
     cout<<s<<endl;
   }
+  cout<<"hi ";
 }
