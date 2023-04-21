@@ -3,7 +3,7 @@ using namespace std;
 int main(){
   int a,b,c;
   cin>>a>>b>>c;
- // int arr[c];
+  // int arr[c];
   int cthNum;
   int acount =1 ;int bcount = 1;
   for(int i =0; i < c;i++)
@@ -29,6 +29,19 @@ int main(){
     }
   }
   if (cthNum % a ==0 && cthNum % b ==0){
-
+    int max_num = max(a,b);
+    while(1){
+      if (max_num%a ==0 && max_num %b ==0){
+        cout<< max_num;
+        break;
+      }
+      max_num++;
+    }
+  }
+  else if (cthNum % a ==0){
+    cout<<a;
+  }
+  else{
+    cout<<b;
   }
 }
