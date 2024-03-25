@@ -2,7 +2,8 @@
 // #include <stdio.h>
 
 // int main() {
-//     char inputString[100]; // Assuming a maximum input length of 99 characters
+//     char inputString[100]; // Assuming a maximum input length of 99
+//     characters
 
 //     printf("Enter a string: ");
 //     fgets(inputString, sizeof(inputString), stdin);
@@ -15,7 +16,6 @@
 //     return 0;
 // }
 
-
 // sorting in c;
 // #include <stdio.h>
 // int main() {
@@ -27,7 +27,7 @@
 //         int r = arr[j];
 //         arr[j] = arr[j+1];
 //         arr[j+1] = r;
-//       } 
+//       }
 //     }
 //   }
 //   printf("Sorted array: ");
@@ -36,7 +36,6 @@
 //   }
 //   return 0;
 // }
-
 
 // remove duplicates
 // #include <stdio.h>
@@ -60,27 +59,23 @@
 //   }
 // }
 
+// hcf  and lcm
+//  #include <stdio.h>
+//  int hcf (int a, int b){
+//    if ( b==0){
+//      return a;
+//    }
+//    return hcf(b, a%b);
+//  }
+//  int lcm (int a , int b){
+//    return a*b / hcf(a,b);
+//  }
+//  int main(){
+//    printf("%d",hcf(24,5));
+//    printf("%d",lcm(24,5));
+//  }
 
-
-//hcf  and lcm
-// #include <stdio.h>
-// int hcf (int a, int b){
-//   if ( b==0){
-//     return a;
-//   }
-//   return hcf(b, a%b);
-// }
-// int lcm (int a , int b){
-//   return a*b / hcf(a,b);
-// }
-// int main(){
-//   printf("%d",hcf(24,5));
-//   printf("%d",lcm(24,5));
-// }
-
-
-
-// reverse each word of a string;  
+// reverse each word of a string;
 // #include <stdio.h>
 // #include <string.h>
 
@@ -109,7 +104,7 @@
 //         word[j++] = arr[i++];
 //       }
 //       word[j] = '\0';
-//       reverseWord(word); 
+//       reverseWord(word);
 //       printf("%s ", word);
 //     } else {
 //       i++;
@@ -118,12 +113,9 @@
 //   return 0;
 // }
 
-
-
-
-//Unique number in array.
-// #include <stdio.h>
-// #include <stdbool.h>
+// Unique number in array.
+//  #include <stdio.h>
+//  #include <stdbool.h>
 
 // bool isUnique(char str[], char ch) {
 //     for (int i = 0; str[i] != '\0'; i++) {
@@ -140,7 +132,7 @@
 //     scanf("%s", inputString);
 
 //     printf("Unique characters in the string: ");
-//     
+//
 //     for (int i = 0; inputString[i] != '\0'; i++) {
 //         if (isUnique(inputString, inputString[i])) {
 //             printf("%c ", inputString[i]);
@@ -151,3 +143,60 @@
 
 //     return 0;
 // }
+//
+//
+// number to binary
+// int main() {
+//   int k = 20;
+//   int bin = 0;
+//   int base = 1;
+//   while (k != 0) {
+//     bin = bin + base * (k % 2);
+//     k = k / 2;
+//     base = base * 10;
+//   }
+//   cout << bin;
+// }
+// bin to number
+// int main() {
+//   string k = "1011";
+//   int l = 0;
+//   int j = 0;
+
+//   for (int i = k.length() - 1; i >= 0; i--) {
+//     if (k[i] == '1') {
+//       l = l + pow(2, j);
+//     }
+//     j++;
+//   }
+//   cout << l;
+// }
+//
+//
+// balance bracket
+int main() {
+  string b;
+  cin >> b;
+  int len = b.length();
+  bool l = true;
+  for (int i = 0; i < len / 2; i++) {
+    if ((b[i] == '(' && b[len - i - 1] == ')') ||
+        (b[i] == '[' && b[len - i - 1] == ']') ||
+        (b[i] == '{' && b[len - i - 1] == '}')) {
+      l = true;
+    } else {
+      l = false;
+      break;
+    }
+  }
+  if (l) {
+    cout << "yes";
+  } else {
+    cout << "No";
+  }
+
+  // first to last
+  // second to second last
+  // third to third last
+  // it all are equal
+}
