@@ -15,15 +15,16 @@ public:
 };
 
 int searchInOrder(int inOrder[], int start, int end, int val) {
-    for (int i = start; i <= end; i++) {
-        if (inOrder[i] == val) {
-            return i;
-        }
+  for (int i = start; i <= end; i++) {
+    if (inOrder[i] == val) {
+      return i;
     }
-    return -1; // Element not found
+  }
+  return -1; // Element not found
 }
 
-Node *buildTreeFromPreOrderInOrder(int preOrder[], int inOrder[], int start, int end, int& preIndex) {
+Node *buildTreeFromPreOrderInOrder(int preOrder[], int inOrder[], int start,
+                                   int end, int &preIndex) {
   if (start > end) {
     return NULL;
   }
@@ -35,19 +36,21 @@ Node *buildTreeFromPreOrderInOrder(int preOrder[], int inOrder[], int start, int
   Node *ele = new Node(preOrder[preIndex++]);
 
   // Construct left and right subtrees recursively
-  ele->left = buildTreeFromPreOrderInOrder(preOrder, inOrder, start, curr - 1, preIndex);
-  ele->right = buildTreeFromPreOrderInOrder(preOrder, inOrder, curr + 1, end, preIndex);
+  ele->left = buildTreeFromPreOrderInOrder(preOrder, inOrder, start, curr - 1,
+                                           preIndex);
+  ele->right =
+      buildTreeFromPreOrderInOrder(preOrder, inOrder, curr + 1, end, preIndex);
 
   return ele;
 }
 
-void inorderTraversal(Node* root) {
-    if (root == NULL) {
-        return;
-    }
-    inorderTraversal(root->left);
-    cout << root->data << " ";
-    inorderTraversal(root->right);
+void inorderTraversal(Node *root) {
+  if (root == NULL) {
+    return;
+  }
+  inorderTraversal(root->left);
+  cout << root->data << " ";
+  inorderTraversal(root->right);
 }
 
 int main() {
@@ -56,7 +59,8 @@ int main() {
   int n = sizeof(preorder) / sizeof(preorder[0]);
 
   int preIndex = 0;
-  Node* root = buildTreeFromPreOrderInOrder(preorder, inorder, 0, n - 1, preIndex);
+  Node *root =
+      buildTreeFromPreOrderInOrder(preorder, inorder, 0, n - 1, preIndex);
 
   // Print the constructed tree (for verification)
   cout << "Inorder Traversal of the constructed tree: ";
